@@ -1,0 +1,33 @@
+https://buer.haus/breport/
+
+https://nciipc.gov.in/documents/Vulnerability_Disclosure_Form.pdf
+
+
+
+vulnerability domain or url - input box
+
+vulnerability name :- input box 
+
+Vulnerability name owasp top 10 - sans 25 - drop down manu - https://www.veracode.com/security/owasp-top-10 , https://www.sans.org/top25-software-errors/ 
+
+vulnerability sevrity  - low - medium - high - critical  - drop down menu
+
+browser - firefox safari chrome - drop down           browser version  -  input box
+
+summery - long  input box 6-7 line
+
+steps - input box online and add next step button like 
+https://buer.haus/breport/
+
+code - 
+
+reference - 2-3 line input box
+
+mitigation - 5-6 line input box
+  
+
+POC - input box with add next line button
+
+
+
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Pentest Report Generator</title>
+</head>
+
+<body>
+    <section class="report-sec">
+        <div class="container">
+            <div class="report-heading-con">
+                <h2 class="report-heading">
+                    Pentest Report Generator
+                </h2>
+            </div>
+            <form class="report-form" method="post">
+                <div class="report-input-con">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-url" id="ch-url">
+                        <label for="ch-url">Domain or URL</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability domain or url:</span> -->
+                        <input type="text" name="url" id="url" placeholder="Enter Domain">
+                    </div>
+                </div>
+                <div class="report-input-con">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-name" id="ch-name">
+                        <label for="ch-name">Vulnerability Name</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability Name:</span> -->
+                        <input type="text" name="name" id="name" placeholder="Enter Name">
+                    </div>
+                </div>
+                <div class="report-input-con">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-nameo" id="ch-nameo">
+                        <label for="ch-nameo">Vulnerability Name Owasp/Sans</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability name owasp:</span> -->
+                        <select name="nameo" id="nameo1" class="nameo1" onclick="valNameChange(this)">
+                            <option value="none">None</option>
+                            <option value="Owasp">Owasp</option>
+                            <option value="Sans">Sans</option>
+                        </select>
+                        <select name="nameo" id="nameo2" class="nameo2">
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="report-input-con">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-vs" id="ch-vs">
+                        <label for="ch-vs">Vulnerability Sevrity</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability Sevrity:</span> -->
+                        <select name="vs" id="vs" class="vs-select">
+                            <option value="none">None</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                            <option value="Critical">Critical</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="report-input-con">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-browser" id="ch-browser">
+                        <label for="ch-browser">Browser</label>
+
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Browser:</span> -->
+                        <select name="browser" id="browser" class="browser-select">
+                            <option value="none">None</option>
+                            <option value="FireFox">FireFox</option>
+                            <option value="Safari">Safari</option>
+                            <option value="Chrome">Chrome</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="report-input-con report-input-con-col">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-summary" id="ch-summary">
+                        <label for="ch-summary">Summary</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability domain or url:</span> -->
+                        <textarea name="summary" id="summary" cols="3" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="report-input-con report-input-con-col">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-steps" id="ch-steps">
+                        <label for="ch-steps">Steps</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <input type="button" class="report-btn add-step-btn" onclick="addStep(this)" value="Add Step">
+                        <div class="steps-con">
+                            <!-- <input type="text" name="steps" id="steps" placeholder="Step 1"> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-input-con report-input-con-col">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-code" id="ch-code">
+                        <label for="ch-code">Code</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability domain or url:</span> -->
+                        <textarea name="code" id="code" cols="3" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="report-input-con report-input-con-col">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-ref" id="ch-ref">
+                        <label for="ch-ref">Reference</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability domain or url:</span> -->
+                        <textarea name="ref" id="ref" cols="3" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <div class="report-input-con report-input-con-col">
+                    <div class="checkbox-con">
+                        <input type="checkbox" class="checkbox" name="ch-mit" id="ch-mit">
+                        <label for="ch-mit">Mitigation</label>
+                    </div>
+                    <div class="report-input-con-2">
+                        <!-- <span>Vulnerability domain or url:</span> -->
+                        <textarea name="mit" id="mit" cols="3" rows="6"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="report-btn submit-btn"><strong>Generate</strong></button>
+            </form>
+            <h2 class="generated-heading">
+                Generated Report :
+            </h2>
+            <p class="generated-report-sec">
+                <!-- <span class="copy-btn" onclick="copyText()">Copy</span> -->
+                <div class="generated-report-con"></div>
+            </p>
+        </div>
+    </section>
+</body>
+<script src="./index.js"></script>
+</html>

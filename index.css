@@ -1,0 +1,111 @@
+:root{
+    --dark-gray:rgb(38, 38, 38);
+    --red-pink: rgb(105, 0, 33);
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+}
+.container{
+    width: 70%;
+    /* box-shadow: 3px 3px 10px 1px gray; */
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--dark-gray);
+}
+
+.report-input-con{
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    /* justify-content: center; */
+    align-items: center;
+}
+.report-input-con-2{
+    width: 50%;
+}
+input[type=text], .report-input-con-2 > textarea, .report-input-con-2 > select{
+    width: 90%;
+    max-width: 100%;
+    background-color: var(--red-pink);
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}
+.report-input-con-2 > input[type=text], .report-input-con-2 > textarea, .report-input-con-2 > select{
+    display: none;
+}
+.steps-con > input{
+    /* display: none; */
+}
+.checkbox-con{
+    width: 50%;
+    position: relative;
+}
+input[type=checkbox]{
+    accent-color: var(--red-pink);
+}
+
+.report-input-con-col{
+    flex-direction: column;
+    align-items:flex-start;
+}
+.report-input-con-col > .report-input-con-2{
+    width: 100%;
+}
+.report-input-con-col > .report-input-con-2 > input, .report-input-con-col > .report-input-con-2 > textarea{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+.report-btn{
+    background-color: var(--red-pink);
+    border: 1px solid white;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+.add-step-btn{
+    margin: 10px 0;
+}
+.step-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.steps-input{
+    margin: 4px 0;
+}
+.close-img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.copy-btn{
+    background-color: var(--red-pink);
+    border: 1px solid white;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.generated-report-con{
+    margin-top: 20px;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background-color: var(--red-pink);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
